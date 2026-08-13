@@ -1,0 +1,383 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Happy Birthday Priyanka 🎂</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #12001f, #3b0a45, #16052b);
+      color: white;
+      overflow-x: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    /* Background glow */
+    .glow {
+      position: fixed;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.3;
+      z-index: -1;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .glow.one {
+      background: #ff4da6;
+      top: -100px;
+      left: -100px;
+    }
+
+    .glow.two {
+      background: #8b5cf6;
+      bottom: -100px;
+      right: -100px;
+      animation-delay: 2s;
+    }
+
+    @keyframes float {
+      50% {
+        transform: translateY(40px) translateX(20px);
+      }
+    }
+
+    .card {
+      width: 100%;
+      max-width: 700px;
+      padding: 40px 28px;
+      border-radius: 25px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      text-align: center;
+      animation: cardEnter 1.2s ease;
+    }
+
+    @keyframes cardEnter {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .cake {
+      font-size: 70px;
+      margin-bottom: 10px;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      50% {
+        transform: translateY(-10px) rotate(3deg);
+      }
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 7vw, 4rem);
+      margin-bottom: 10px;
+      background: linear-gradient(90deg, #ff8acb, #ffd166, #c084fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .name {
+      color: #ffd166;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      font-size: clamp(1rem, 3vw, 1.25rem);
+      color: #f1d8f7;
+      margin-bottom: 30px;
+    }
+
+    .message {
+      text-align: left;
+      line-height: 1.8;
+      font-size: clamp(1rem, 2.8vw, 1.15rem);
+      color: #f7edf9;
+    }
+
+    .message p {
+      margin-bottom: 18px;
+    }
+
+    .highlight {
+      color: #ffd166;
+      font-weight: bold;
+    }
+
+    .quote-box {
+      margin: 30px 0;
+      padding: 22px;
+      border-left: 4px solid #ffd166;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      font-style: italic;
+      line-height: 1.7;
+      color: #fff;
+    }
+
+    .wish {
+      margin-top: 30px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #ffd166;
+    }
+
+    .signature {
+      margin-top: 30px;
+      font-size: 1.05rem;
+      color: #f3d6ff;
+    }
+
+    .signature strong {
+      color: #ff9ed2;
+      font-size: 1.2rem;
+    }
+
+    button {
+      margin-top: 28px;
+      border: none;
+      padding: 14px 25px;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      color: #35103d;
+      background: linear-gradient(90deg, #ffd166, #ff9ed2);
+      box-shadow: 0 8px 25px rgba(255, 209, 102, 0.25);
+      transition: transform 0.2s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    button:active {
+      transform: scale(0.96);
+    }
+
+    /* Confetti */
+    .confetti {
+      position: fixed;
+      width: 10px;
+      height: 14px;
+      top: -20px;
+      z-index: 9999;
+      animation: fall linear forwards;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(720deg);
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 480px) {
+      body {
+        padding: 14px;
+        align-items: flex-start;
+      }
+
+      .card {
+        padding: 30px 20px;
+        margin-top: 10px;
+        border-radius: 20px;
+      }
+
+      .cake {
+        font-size: 55px;
+      }
+
+      .message {
+        line-height: 1.7;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="glow one"></div>
+  <div class="glow two"></div>
+
+  <main class="card">
+
+    <div class="cake">🎂✨</div>
+
+    <h1>Happy Birthday, <span class="name">Priyanka</span>! 🎉</h1>
+
+    <p class="subtitle">
+      To one of the genuinely good people I'm lucky to call my best friend.
+    </p>
+
+    <div class="message">
+
+      <p>
+        <span class="highlight">Dear Priyanka,</span>
+      </p>
+
+      <p>
+        Today is your day, and honestly, I hope you know how much you deserve
+        every bit of happiness, laughter, success, and love that comes your way.
+        You are not just someone I call a friend — you are someone whose presence
+        has genuinely made a difference in my life.
+      </p>
+
+      <p>
+        You have always been a <span class="highlight">kind and good-hearted person</span>.
+        The kind of person who may not always realize how much her actions mean
+        to others. Your kindness is not loud or something you need to prove.
+        It is simply a part of who you are, and that is something I truly respect.
+      </p>
+
+      <p>
+        There were times when I was really down, when things did not feel right,
+        when my mind was heavy and I probably wasn't the easiest person to be
+        around. But you stood by me. You were there. Maybe you didn't always
+        have the perfect words, and honestly, you didn't need to.
+        <span class="highlight">Your presence itself meant more than you probably know.</span>
+      </p>
+
+      <p>
+        A lot of people are around when life is easy. But the people who stay
+        when things become difficult — those are the people you never forget.
+        And Priyanka, you are one of those people for me.
+      </p>
+
+      <div class="quote-box">
+        "A true friend is not measured by how often they are present in your
+        happiest moments, but by how sincerely they stand beside you when life
+        gets heavy."
+      </div>
+
+      <p>
+        As your best friend, I just want to say this like a gentleman and with
+        complete honesty: <span class="highlight">I respect you deeply.</span>
+        I appreciate the person you are, the kindness you carry, and the way you
+        have stood by me when I needed someone. Real friendship is rare, and I
+        don't take ours for granted.
+      </p>
+
+      <p>
+        I hope this new year of your life brings you opportunities that excite
+        you, people who value you, moments that make you smile for no reason,
+        and the strength to overcome anything that comes your way.
+        May you never have to question your worth, because you truly deserve
+        good things in life.
+      </p>
+
+      <p>
+        Keep being kind, but never let anyone take advantage of that kindness.
+        Keep being strong, even though you don't always have to pretend to be.
+        Keep chasing what you want, and never settle for less than the respect,
+        happiness, and peace you deserve.
+      </p>
+
+      <p>
+        And no matter how busy life gets or how much things change,
+        I hope you always remember that somewhere, you have a best friend
+        who genuinely wishes the best for you and will always be grateful
+        for the way you stood by him when he was going through difficult times.
+      </p>
+
+      <p class="wish">
+        So here's to you, Priyanka 🥂✨<br>
+        More happiness. More success. More peace.<br>
+        More beautiful memories. More reasons to smile.<br>
+        And hopefully, a year even better than the last.
+      </p>
+
+      <p>
+        Stay the wonderful person you are. Take care of yourself, believe in
+        yourself, and never forget how valuable you are to the people who truly
+        know you.
+      </p>
+
+    </div>
+
+    <p class="signature">
+      Happy Birthday once again, my best friend. 🎂❤️<br><br>
+      <strong>— With respect, appreciation, and best wishes</strong>
+    </p>
+
+    <button onclick="celebrate()">Click for Birthday Magic 🎊</button>
+
+  </main>
+
+  <script>
+    const colors = [
+      "#ff4da6",
+      "#ffd166",
+      "#8b5cf6",
+      "#4ade80",
+      "#60a5fa",
+      "#ffffff"
+    ];
+
+    function createConfetti() {
+      const confetti = document.createElement("div");
+
+      confetti.classList.add("confetti");
+
+      confetti.style.left = Math.random() * 100 + "vw";
+      confetti.style.backgroundColor =
+        colors[Math.floor(Math.random() * colors.length)];
+
+      confetti.style.animationDuration =
+        (Math.random() * 3 + 2) + "s";
+
+      confetti.style.opacity = Math.random() * 0.7 + 0.3;
+
+      confetti.style.transform =
+        `rotate(${Math.random() * 360}deg)`;
+
+      document.body.appendChild(confetti);
+
+      setTimeout(() => {
+        confetti.remove();
+      }, 5500);
+    }
+
+    function celebrate() {
+      for (let i = 0; i < 150; i++) {
+        setTimeout(createConfetti, i * 15);
+      }
+    }
+
+    // Automatic confetti when the page opens
+    window.addEventListener("load", () => {
+      setTimeout(celebrate, 500);
+    });
+  </script>
+
+</body>
+</html>
+```
+
